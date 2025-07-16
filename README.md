@@ -37,6 +37,8 @@ Folder and User Configuration
     Member of the Users group only
 
 Screenshot References: 2.png, 3.png
+
+
 Network Configuration
 4. VirtualBox Adapter
 
@@ -53,8 +55,13 @@ Network Configuration
     Gateway/DNS: Not required (host-only network)
 
 Screenshot References: 6.png, 5.png
+
+
+
 Firewall Configuration
+
 Allow SMB from Linux Host
+
 
 New-NetFirewallRule -DisplayName "Allow SMB from Host" -Direction Inbound -Protocol TCP -LocalPort 445 -RemoteAddress 192.168.56.1 -Action Allow
 
@@ -75,7 +82,11 @@ password=YourPassword
 domain=WORKGROUP
 
 Screenshot Reference: 4.png
+
+
 Audit Logging
+
+
 7. Enable File Access Auditing
 
 auditpol /set /category:"Object Access" /subcategory:"File System" /success:enable /failure:enable
@@ -93,6 +104,8 @@ auditpol /set /category:"Object Access" /subcategory:"File System" /success:enab
     Permissions: Full Control
 
 Screenshot Reference: 1.png
+
+
 9. View Logs
 
     Open eventvwr.msc
@@ -118,6 +131,7 @@ Successfully logs an Event ID 4663 with:
     
 
 Screenshot Reference: 1.png
+
 
 
 
